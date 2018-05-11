@@ -1,12 +1,10 @@
 /**
  * @title Paperweight
- * @description Just some game
+ * @description Comprised of chat system, coordinate system, and request handlers.
  * @author ethancrist
  **/
 
 'use strict'
-
-
 
 // [DEPENDENCIES]
 const meta = require('./meta')(true)
@@ -29,8 +27,6 @@ return
 
 // [MIDDLEWARE]
 
-//var socket = micro.socket({ port: 3000 })
-//socket.on('connection', function
 
 // [ENDPOINTS]
 micro.get('/', (req, res) => {

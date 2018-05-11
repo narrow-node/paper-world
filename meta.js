@@ -46,8 +46,8 @@ Meta.prototype.options = {
     appName: 'Paperweight-W' + process.env.WORLD,
     viewDir: '../client',
     ssl: {
-        key: '/etc/letsencrypt/live/narrownode.com/privkey.pem',
-        cert: '/etc/letsencrypt/live/narrownode.com/cert.pem',
+        key: process.env.SSLKEY,
+        cert: process.env.SSLCERT,
         forceHTTPS: true
     },
 } 

@@ -8,7 +8,7 @@
 
 // [DEPENDENCIES]
 const micro = require('iomicro')
-const clockwork = require('clockwork')({ key: '8b3e9f290c3b39837f22b5654c3550cf641b6f72' })
+const clockwork = require('clockwork')({ key: process.env.SMSKEY })
 
 
 // [DATA]
