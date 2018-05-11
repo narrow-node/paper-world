@@ -1,0 +1,20 @@
+{
+  "name": "paperweight",
+  "version": "1.0.0",
+  "description": "Some game",
+  "main": "world.js",
+  "scripts": {
+    "start": "npm update && forever start world.js",
+    "deploy": "node ../../../publish/publish.js"
+  },
+  "keywords": [
+    "rpg"
+  ],
+  "author": "ethancrist",
+  "license": "ISC",
+  "dependencies": {
+    "clockwork": "^0.1.4",
+    "iomicro": "^1.5.1",
+    "ws": "^5.1.1"
+  }
+}
