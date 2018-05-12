@@ -21,7 +21,6 @@ socket.on('connection', function connection(res) {
 
     res.send('something');
 })
-
 return
 
 
