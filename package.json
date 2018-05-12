@@ -4,7 +4,7 @@
   "description": "Some game",
   "main": "world.js",
   "scripts": {
-    "start": "npm update && forever start world.js",
+    "start": "node ../secure-launch/run",
     "deploy": "node ../../../publish/publish.js"
   },
   "keywords": [

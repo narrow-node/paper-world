@@ -7,8 +7,8 @@
 'use strict'
 
 // [DEPENDENCIES]
-const micro = require('iomicro')
 const clockwork = require('clockwork')({ key: process.env.SMSKEY })
+const micro = require('iomicro')
 
 
 // [DATA]
@@ -33,7 +33,7 @@ Util.prototype.sendText = function(message, number) {
      **/
 
     // Fallback phone number.
-    number = number || '15133302458'
+    number = number || process.env.PHONE
 
     // Wrapping text message operation in a Promise.
     return new Promise(function(resolve, reject) {

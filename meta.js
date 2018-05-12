@@ -44,13 +44,15 @@ Meta.prototype.options = {
      * @description The start options passed through to iomicro on .listen()
      **/
     appName: 'Paperweight-W' + process.env.WORLD,
-    viewDir: '../client',
-    ssl: {
-        key: process.env.SSLKEY,
-        cert: process.env.SSLCERT,
-        forceHTTPS: true
-    },
+    viewDir: '../client'
 } 
+if (process.env.SSLKEY && process.env.SSLCERT) {
+    Meta.prototype.options.ssl = {
+        key: process.env.SSLKEY,
+        cert: process.env.SSLCERT
+    }
+}
+
 
 // [EXPORTS]
 module.exports = function(isStart) {
