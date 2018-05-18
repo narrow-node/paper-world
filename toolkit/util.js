@@ -11,7 +11,11 @@ const clockwork = require('clockwork')({ key: process.env.SMSKEY })
 const micro = require('iomicro')
 
 
-// [DATA]
+// [MIDDLEWARE]
+micro.init({ appName: 'paper-world-' + process.env.WORLD })
+
+
+// [UTIL]
 const Util = function() {
     /**
      * @description Toolkit for engine developers.
