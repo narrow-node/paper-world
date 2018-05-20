@@ -9,13 +9,14 @@
 // [DEPENDENCIES]
 const util = require('./util')
 
-
 // [DATA]
 const Meta = function(isStart) {
     /**
      * @description Metadata for this world.
      **/
-    util.log('Loading world metadata...')
+    this.name = 'Meta'
+
+    util.log('['+this.name+'] Loading world metadata...')
 
     // Setting static prototype variables.
     this.port = this.getPort()
@@ -25,6 +26,9 @@ const Meta = function(isStart) {
 
     // Metadata is being loaded from application start; storing startMS time.
     if (isStart) this.startMS = util.getMS()
+
+    // Asynchronizing all functions in this prototype.
+    util.asyncProto(this)
 }
 //Meta.prototype.getCache = function() { return this.isDevMode ? util.getMS() : meta.startMS },
 Meta.prototype.getPort = function() {
@@ -52,7 +56,6 @@ if (process.env.SSLKEY && process.env.SSLCERT) {
         cert: process.env.SSLCERT
     }
 }
-
 
 // [EXPORTS]
 module.exports = function(isStart) {

@@ -13,8 +13,7 @@
   "author": "ethancrist",
   "license": "ISC",
   "dependencies": {
-    "clockwork": "^0.1.4",
-    "iomicro": "^1.5.1",
+    "iomicro": "^1.6.4",
     "ws": "^5.1.1"
   }
 }
