@@ -125,7 +125,7 @@ Util.prototype.asyncProto = function(proto) {
     // NOTE: this.log inherits micro.log, which is already async
     const blacklist = [ this.async, this.promise, this.asyncProto, this.log, this.getMS ]
 
-    // Looping thorough all variables in the specified prototype.
+    // Looping through all variables in the specified prototype.
     for (var name in proto) {
         // This function in the proto.
         const fn = proto[name]
