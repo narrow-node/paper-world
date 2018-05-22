@@ -135,7 +135,7 @@ Util.prototype.asyncProto = function(proto) {
 
         // Making this function an asynchronous promise.
         // Passing through `proto` for the `customThis` in `self.promise` so that when
-        // a function in the prototype in later called, `this` can be accessed 
+        // a function in the prototype is later called, `this` can be accessed 
         proto[name] = this.promise(fn, proto)
     }
 
